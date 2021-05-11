@@ -1,5 +1,6 @@
 
 var pg = require('pg');
+
 /* pg.defaults.ssl = true; */
 module.exports = {
   username: "fmcpsmkkasbhuk",
@@ -7,10 +8,12 @@ module.exports = {
   database: "d9ckkmpm2aqv0i",
   host: "ec2-54-198-73-79.compute-1.amazonaws.com",
   dialect: "postgres",
-  
+  ssl:true,
   dialectOptions: {
     ssl: {
-        rejectUnauthorized: true
+      require:true,
+        rejectUnauthorized: false,
+        
     }
 },
   define: {
