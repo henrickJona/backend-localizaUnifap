@@ -4,10 +4,12 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    
+    return queryInterface.sequelize.query('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";')
+    .then(()=>{
       return queryInterface.createTable('buildings', { 
         id: {
           type: Sequelize.UUID,
+          defaultValue: Sequelize.literal('uuid_generate_v4()'),
           primaryKey: true,
                 allowNull:false
         },
@@ -26,19 +28,29 @@ module.exports = {
           type:Sequelize.STRING,
           allowNull:false
         },
-        categoryId:{
+        image:{
           type:Sequelize.STRING,
           allowNull:false
         },
-        createdAt:{
+        category_id:{
+          type:Sequelize.UUID,
+          allowNull:false
+          ,references: { model: "categories", key: "id" },
+          onUpdate: "CASCADE",
+          onDelete: "CASCADE",
+        },
+        created_at:{
           type:Sequelize.DATE,
           allowNull:false
         },
-        updatedAt:{
+        updated_at:{
           type:Sequelize.DATE,
           allowNull:false
         }
         });
+    }
+    )
+      
     
   },
 

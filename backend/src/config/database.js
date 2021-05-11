@@ -16,3 +16,19 @@ module.exports = {
     
   }
 };
+/* module.exports = {
+  username: "postgres",
+  password: "Jonathan!1",
+  database: "testeBackendLocalizaUnifap",
+  host: "localhost",
+  dialect: "postgres",
+  dialectOptions: {
+    rejectUnauthorized: false
+  },
+  define: {
+    
+    timestamps: true,
+    underscored: true,
+    
+  }
+}; */

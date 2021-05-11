@@ -7,12 +7,14 @@ class Buildings extends Model{
             latitude:DataTypes.STRING,
             longitude: DataTypes.STRING,
             describe:DataTypes.STRING,
+            image:DataTypes.STRING,
+            
         }, {
             sequelize
         })
     }
     static associate(models){
-        this.belongsTo(models.Categories, {foreignKey: 'categoryId', as: 'category'});
+        this.belongsTo(models.Categories, {foreignKey: 'category_id', as: 'category'});
 
     }
 }

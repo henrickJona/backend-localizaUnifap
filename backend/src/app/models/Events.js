@@ -3,17 +3,17 @@ const { Model, DataTypes } = require('sequelize');
 class Events extends Model{
     static init(sequelize){
         super.init({
-            name: DataTypes.STRING,
-            latitude:DataTypes.STRING,
-            longitude: DataTypes.STRING,
+            title: DataTypes.STRING,
             describe:DataTypes.STRING,
+            start_date_time:DataTypes.STRING,
+            end_date_time:DataTypes.STRING,
         }, {
             sequelize
         })
     }
     static associate(models){
-        this.belongsTo(models.Users, {foreignKey: 'userId', as: 'user'});
-        this.belongsTo(models.Buildings, {foreignKey: 'buildingId', as: 'building'});
+        this.belongsTo(models.Users, {foreignKey: 'user_id', as: 'user'});
+        this.belongsTo(models.Buildings, {foreignKey: 'building_id', as: 'building'});
     }
 }
 
