@@ -16,6 +16,7 @@ module.exports = {
 
     },
     async show (req, res){
+        console.log('showbuildings')
         const buildings = await Buildings.findAll();
         return res.json(buildings);
 
