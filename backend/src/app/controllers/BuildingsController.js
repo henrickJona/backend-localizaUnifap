@@ -17,7 +17,8 @@ module.exports = {
     },
     async show (req, res){
         console.log('showbuildings')
-        /* const buildings = await Buildings.findAll(); */
+        
+        const buildings = await Buildings.findAll().then(()=>console.log('tudo clean')).catch((error)=>console.log(error))
         return res.status(200);
 
     }
