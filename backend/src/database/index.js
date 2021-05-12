@@ -8,7 +8,7 @@ const Categories = require("../app/models/Categories");
 
 const connection = new Sequelize(process.env.DATABASE_URL,{ dbConfig});
 
-     connection.authenticate().then(()=>console.log('Connection has been established successfully.',)).catch((error)=>console.log('Unable to connect to the database:', error))
+connection.authenticate().then(()=>console.log('Connection has been established successfully.',)).catch((error)=>console.log('Unable to connect to the database:', error))
     
  
 Users.init(connection);
