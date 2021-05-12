@@ -18,10 +18,13 @@ module.exports = {
     async show (req, res){
         console.log('showbuildings')
         try {
+            console.log('vdvdv')
             const buildings = await Buildings.findAll()
+            console.log('xcxcxc')
             return res.json(buildings);
 
         } catch (error) {
+            console.log('dddddddddd')
             console.log(error,'gfffffffffff')
         }
         
