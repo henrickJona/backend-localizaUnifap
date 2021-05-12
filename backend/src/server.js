@@ -5,7 +5,7 @@ import routes from './routes' */
 const routes = require("./routes");
 /* import 'dotenv/config'; */
 /* import database from './database' */
-require("./database");
+require("./config/database");
 const cors = require('cors')
 
 const app = express();
