@@ -21,7 +21,7 @@ module.exports = {
             console.log('vdvdv')
             const buildings = await Buildings.findAll()
             console.log('xcxcxc')
-            /* return res.json(buildings); */
+            return res.json(buildings);
 
         } catch (error) {
             console.log('dddddddddd')
