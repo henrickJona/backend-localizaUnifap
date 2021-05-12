@@ -1,18 +1,19 @@
 
 var pg = require('pg');
-require('dotenv').config()
-/* pg.defaults.ssl = true; */
+
+pg.defaults.ssl = true;
 module.exports = {
-  username: "rmsubgrhjhaefh",
+  /* 'postgres://rmsubgrhjhaefh:c2e98479f7d630d36544a4caaf55bac77e2c665616d628b1f5a1837acc672611@ec2-18-215-111-67.compute-1.amazonaws.com:5432/d29seue4u26p3r' */
+  /* username: "rmsubgrhjhaefh",
   password: "c2e98479f7d630d36544a4caaf55bac77e2c665616d628b1f5a1837acc672611",
   database: "d29seue4u26p3r",
   host: 'ec2-18-215-111-67.compute-1.amazonaws.com',
   
-  dialect: "postgres",
-  ssl:true,
+  dialect: "postgres", */
+  /* ssl:true, */
   dialectOptions: {
     ssl: {
-      require:true,
+      /* require:true, */
       rejectUnauthorized: false,
         
     }

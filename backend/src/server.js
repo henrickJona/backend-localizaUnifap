@@ -1,4 +1,5 @@
 const express = require("express");
+require('dotenv').config()
 /* import express from 'express'
 import routes from './routes' */
 const routes = require("./routes");
