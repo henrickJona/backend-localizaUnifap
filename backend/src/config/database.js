@@ -7,6 +7,7 @@ module.exports = {
   password: "c2e98479f7d630d36544a4caaf55bac77e2c665616d628b1f5a1837acc672611",
   database: "d29seue4u26p3r",
   host: 'ec2-18-215-111-67.compute-1.amazonaws.com',
+  
   dialect: "postgres",
   ssl:true,
   dialectOptions: {
