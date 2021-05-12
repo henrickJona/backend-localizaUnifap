@@ -1,13 +1,12 @@
 
 var pg = require('pg');
-
-
+require('dotenv').config()
 /* pg.defaults.ssl = true; */
 module.exports = {
-  username: "fmcpsmkkasbhuk",
-  password: "4a1709b13794eb8886276d829a0925be0bd5b019143f0c3f6e5a2640942e9561",
-  database: "d9ckkmpm2aqv0i",
-  host: 'ec2-54-198-73-79.compute-1.amazonaws.com',
+  username: "rmsubgrhjhaefh",
+  password: "c2e98479f7d630d36544a4caaf55bac77e2c665616d628b1f5a1837acc672611",
+  database: "d29seue4u26p3r",
+  host: 'ec2-18-215-111-67.compute-1.amazonaws.com',
   dialect: "postgres",
   ssl:true,
   dialectOptions: {
