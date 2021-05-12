@@ -1,4 +1,12 @@
 {
+  
+  "name": "localizaUnifap",
+  "description": "a really cool app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.x"
+  }
+,
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "node backend/src/server.js",
@@ -9,7 +17,9 @@
     "dev": " nodemon backend/src/server.js",
     "production": "node backend/src/server.js"
   },
+  
   "dependencies": {
+    
     "aws-sdk": "^2.904.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
