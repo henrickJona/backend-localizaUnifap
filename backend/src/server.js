@@ -5,9 +5,10 @@ const routes = require("./routes");
 /* import 'dotenv/config'; */
 /* import database from './database' */
 require("./database");
-/* require('dotenv/config') */
-const app = express();
+const cors = require('cors')
 
+const app = express();
+app.use(cors())
 app.use(express.json());
 app.use(routes);
 
